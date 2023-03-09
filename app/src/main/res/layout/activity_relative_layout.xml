@@ -7,8 +7,6 @@
     <!-- Добавить: Кнопка, Текст, Поле ввода, картинка -->
 
     <!-- Картинка -->
-
-    <!-- Кнопка -->
     <ImageView
         android:id="@+id/imgPig"
         android:layout_width="match_parent"
@@ -16,7 +14,7 @@
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/pig" />
-
+    <!-- Текст -->
     <TextView
         android:id="@+id/textPig"
         android:layout_width="match_parent"
@@ -28,7 +26,7 @@
         android:layout_below="@+id/imgPig"
         android:text="@string/write_money"
         android:textSize="16sp" />
-
+    <!-- Поле ввода -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,7 +37,7 @@
         android:hint="@string/write_money"
         android:layout_below="@+id/textPig"
         android:textSize="16sp" />
-
+    <!-- Кнопка -->
     <Button
         android:id="@+id/button"
         android:layout_width="236dp"

@@ -4,4 +4,5 @@
     <string name="write_money">Напишите сумму денег</string>
     <string name="push_money">Внести деньги</string>
     <string name="login">Введите логин</string>
+    <string name="giveMeMyMoney">Получить деньги</string>
 </resources>
