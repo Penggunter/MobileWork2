@@ -18,7 +18,7 @@
 
     <!-- Текст -->
     <TextView
-        android:id="@+id/media_description"
+        android:id="@+id/textbank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -27,18 +27,19 @@
         android:layout_marginEnd="16dp"
         android:textSize="16sp"
         android:textColor="@color/gray"
-        android:text="Вход в НадоБанк"/>
+        android:text="@string/enter_bank"/>
 
     <!-- Поле ввода -->
     <EditText
-        android:id="@+id/media_title"
+        android:id="@+id/login_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:inputType="text" />
+        android:inputType="text"
+        android:hint="@string/login"/>
 
     <!-- Кнопка -->
     <Button
@@ -46,7 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:text="Вход в систему"
-        android:backgroundTint="@color/limeGreen"/>
+        android:backgroundTint="@color/limeGreen"
+        android:text="@string/enter_system" />
 
 </LinearLayout>

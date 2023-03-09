@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">MobileWork2</string>
+    <string name="enter_system">Вход в систему</string>
+    <string name="enter_bank">Вход в НадоБанк</string>
+    <string name="write_money">Напишите сумму денег</string>
+    <string name="push_money">Внести деньги</string>
+    <string name="login">Введите логин</string>
 </resources>
