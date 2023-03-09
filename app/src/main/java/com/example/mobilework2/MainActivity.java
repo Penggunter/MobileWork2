@@ -1,5 +1,7 @@
 package com.example.mobilework2;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,13 +15,23 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     EditText text;
+    TextView loadTitle;
 
+    ActivityResultLauncher<Intent> dataRecieverActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK){
+                    Intent data = result.getData();
+
+                    assert data != null;
+                    loadTitle.setText(data.getStringExtra("messange"));
+                }
+            });
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView loadTitle = (TextView)findViewById(R.id.textmain);
+        loadTitle = (TextView)findViewById(R.id.textmain);
         loadTitle.setText(R.string.helloworld);
         ImageView loadPicture = (ImageView)findViewById(R.id.kartinka);
         loadPicture.setImageResource(R.drawable.money);
@@ -35,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("messange", text.getText().toString());
-                startActivity(intent);
+                dataRecieverActivityResultLauncher.launch(intent);
             }
         });
     }
@@ -46,6 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
         Intent intent = new Intent(MainActivity.this, SecondActivity.class);
         intent.putExtra("messange", text.getText().toString());
-        startActivity(intent);
+        dataRecieverActivityResultLauncher.launch(intent);
     }
 }
