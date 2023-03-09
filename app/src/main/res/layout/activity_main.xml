@@ -22,6 +22,16 @@
         android:layout_height="wrap_content"
         />
 
+    <EditText
+        android:id="@+id/messengetext"
+        android:layout_width="339dp"
+        android:layout_height="40dp"
+        android:layout_margin="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/textmain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kartinka"></EditText>
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
